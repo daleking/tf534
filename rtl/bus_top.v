@@ -329,7 +329,7 @@ assign VMA =  HIGHZ ? 1'bz : VMA_INT;
 
 assign DSACK1 = FPUOP | (~IDEWAIT | DSACK_INT[0]) & DSACK1_SYNC & DTACK_IDE & SLOWCYCLE;
 
-assign BG = BG_INT ? 1'bz : 1'b0;
+assign BG = BG_INT ? 1'b1 : 1'b0;
 assign AVEC = AVEC_INT;
 
 assign BERR = (CPCS_INT | ~CPSENSE) ? 1'bz : 1'b0;
